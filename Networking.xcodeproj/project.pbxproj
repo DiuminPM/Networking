@@ -12,6 +12,7 @@
 		1F396376261C8B5C004AEBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F396374261C8B5C004AEBBB /* Main.storyboard */; };
 		1F396378261C8B5D004AEBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F396377261C8B5D004AEBBB /* Assets.xcassets */; };
 		1F39637B261C8B5D004AEBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F396379261C8B5D004AEBBB /* LaunchScreen.storyboard */; };
+		7BAB313D90C8AFBDD8840828 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9A71A2352C9B7E2930F33F /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		1F396377261C8B5D004AEBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F39637A261C8B5D004AEBBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F39637C261C8B5D004AEBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26FBFA9974FFFCEA29A82C00 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
+		AA9A71A2352C9B7E2930F33F /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86552CA247116579631F259 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAB313D90C8AFBDD8840828 /* Pods_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				1F39636D261C8B5C004AEBBB /* Networking */,
 				1F39636C261C8B5C004AEBBB /* Products */,
+				3B557C83E181D1856E83A339 /* Pods */,
+				3492A430419B9208A0C3DB06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		3492A430419B9208A0C3DB06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA9A71A2352C9B7E2930F33F /* Pods_Networking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B557C83E181D1856E83A339 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F86552CA247116579631F259 /* Pods-Networking.debug.xcconfig */,
+				26FBFA9974FFFCEA29A82C00 /* Pods-Networking.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F39637F261C8B5D004AEBBB /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
+				0A0559643905F7090E760C39 /* [CP] Check Pods Manifest.lock */,
 				1F396367261C8B5C004AEBBB /* Sources */,
 				1F396368261C8B5C004AEBBB /* Frameworks */,
 				1F396369261C8B5C004AEBBB /* Resources */,
+				B7E34FC6B451494DC39D8A75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A0559643905F7090E760C39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Networking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E34FC6B451494DC39D8A75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Networking/Pods-Networking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Networking/Pods-Networking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Networking/Pods-Networking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F396367261C8B5C004AEBBB /* Sources */ = {
@@ -279,6 +348,7 @@
 		};
 		1F396380261C8B5D004AEBBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F86552CA247116579631F259 /* Pods-Networking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -298,6 +368,7 @@
 		};
 		1F396381261C8B5D004AEBBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26FBFA9974FFFCEA29A82C00 /* Pods-Networking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
