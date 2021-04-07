@@ -27,6 +27,12 @@ class ViewController: UIViewController {
         tapButton.isHidden = false
         tapButton.addTarget(self, action: #selector(fetchedImage), for: .touchUpInside)
         tapButton.frame = CGRect(x: 16, y: view.frame.height/2 - 150, width: view.frame.width - 32, height: 300)
+        tapButton.layer.borderWidth = 1
+        tapButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        tapButton.layer.cornerRadius = 10
+        tapButton.titleLabel?.font = .systemFont(ofSize: 46)
+        tapButton.titleLabel?.numberOfLines = 0
+        tapButton.titleLabel?.textAlignment = .center
         view.addSubview(tapButton)
         tapButton.setTitle("Tap to download an Image", for: .normal)
         activityIndicator.isHidden = true
