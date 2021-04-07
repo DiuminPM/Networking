@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		1F396376261C8B5C004AEBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F396374261C8B5C004AEBBB /* Main.storyboard */; };
 		1F396378261C8B5D004AEBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F396377261C8B5D004AEBBB /* Assets.xcassets */; };
 		1F39637B261C8B5D004AEBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F396379261C8B5D004AEBBB /* LaunchScreen.storyboard */; };
+		1F39638C261DD8C5004AEBBB /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F39638B261DD8C5004AEBBB /* ImageViewController.swift */; };
 		7BAB313D90C8AFBDD8840828 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9A71A2352C9B7E2930F33F /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		1F396377261C8B5D004AEBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F39637A261C8B5D004AEBBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F39637C261C8B5D004AEBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F39638B261DD8C5004AEBBB /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		26FBFA9974FFFCEA29A82C00 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 		AA9A71A2352C9B7E2930F33F /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86552CA247116579631F259 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				1F39636E261C8B5C004AEBBB /* AppDelegate.swift */,
 				1F396372261C8B5C004AEBBB /* ViewController.swift */,
+				1F39638B261DD8C5004AEBBB /* ImageViewController.swift */,
 				1F396374261C8B5C004AEBBB /* Main.storyboard */,
 				1F396377261C8B5D004AEBBB /* Assets.xcassets */,
 				1F396379261C8B5D004AEBBB /* LaunchScreen.storyboard */,
@@ -85,7 +88,6 @@
 				F86552CA247116579631F259 /* Pods-Networking.debug.xcconfig */,
 				26FBFA9974FFFCEA29A82C00 /* Pods-Networking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -204,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F396373261C8B5C004AEBBB /* ViewController.swift in Sources */,
+				1F39638C261DD8C5004AEBBB /* ImageViewController.swift in Sources */,
 				1F39636F261C8B5C004AEBBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
