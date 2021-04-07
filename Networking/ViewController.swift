@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let tapButton = UIButton()
     let tapGetButton = UIButton()
     let tapPostButton = UIButton()
+    let tapOurCoursesButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +72,22 @@ class ViewController: UIViewController {
             maker.right.left.equalTo(view).inset(16)
             maker.height.equalTo(150)
         }
+        tapOurCoursesButton.addTarget(self, action: #selector(fetchedCourse), for: .touchUpInside)
+        view.addSubview(tapOurCoursesButton)
+        tapOurCoursesButton.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        tapOurCoursesButton.layer.borderWidth = 1
+        tapOurCoursesButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        tapOurCoursesButton.layer.cornerRadius = 10
+        tapOurCoursesButton.titleLabel?.font = .systemFont(ofSize: 46)
+        tapOurCoursesButton.titleLabel?.numberOfLines = 0
+        tapOurCoursesButton.titleLabel?.textAlignment = .center
+        view.addSubview(tapOurCoursesButton)
+        tapOurCoursesButton.setTitle("Our courses", for: .normal)
+        tapOurCoursesButton.snp.makeConstraints { (maker) in
+            maker.top.equalTo(tapPostButton.snp.bottom).inset(-16)
+            maker.right.left.equalTo(view).inset(16)
+            maker.height.equalTo(150)
+        }
     }
     
     private func setupNavigationBar() {
@@ -79,6 +96,9 @@ class ViewController: UIViewController {
     
     @objc func fetchedImage() {
         navigationController?.pushViewController(ImageViewController(), animated: true)
+    }
+    @objc func fetchedCourse() {
+        navigationController?.pushViewController(CourseViewController(), animated: true)
     }
     
     @objc func getRequest() {
@@ -99,6 +119,30 @@ class ViewController: UIViewController {
         } .resume()
     }
     @objc func postRequest() {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        let userData = [
+            "street:": "Lenina",
+            "numberHouse": "36a"
+        ]
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        // - правило добавления новых записей(значение взяли из полученого респонса)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }
+        request.httpBody = httpBody
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            guard let response = response, let data = data else { return }
+            print(response)
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            }
+            catch {
+                print(error)
+            }
+        }.resume()
         
     }
     
