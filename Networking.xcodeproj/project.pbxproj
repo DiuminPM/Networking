@@ -16,6 +16,7 @@
 		1F5349FC261DFE85008A998C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5349FB261DFE85008A998C /* Course.swift */; };
 		1F5349FF261DFF45008A998C /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5349FE261DFF45008A998C /* CourseViewController.swift */; };
 		1F622B98261E269000B465A2 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F622B97261E269000B465A2 /* WebsiteDescription.swift */; };
+		1F622B9B261E414500B465A2 /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F622B9A261E414500B465A2 /* CustomViewCell.swift */; };
 		7BAB313D90C8AFBDD8840828 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9A71A2352C9B7E2930F33F /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		1F5349FB261DFE85008A998C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		1F5349FE261DFF45008A998C /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		1F622B97261E269000B465A2 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
+		1F622B9A261E414500B465A2 /* CustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
 		26FBFA9974FFFCEA29A82C00 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 		AA9A71A2352C9B7E2930F33F /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86552CA247116579631F259 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				1F5349FB261DFE85008A998C /* Course.swift */,
 				1F622B97261E269000B465A2 /* WebsiteDescription.swift */,
 				1F5349FE261DFF45008A998C /* CourseViewController.swift */,
+				1F622B9A261E414500B465A2 /* CustomViewCell.swift */,
 				1F396374261C8B5C004AEBBB /* Main.storyboard */,
 				1F396377261C8B5D004AEBBB /* Assets.xcassets */,
 				1F396379261C8B5D004AEBBB /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			files = (
 				1F622B98261E269000B465A2 /* WebsiteDescription.swift in Sources */,
 				1F5349FC261DFE85008A998C /* Course.swift in Sources */,
+				1F622B9B261E414500B465A2 /* CustomViewCell.swift in Sources */,
 				1F396373261C8B5C004AEBBB /* ViewController.swift in Sources */,
 				1F39638C261DD8C5004AEBBB /* ImageViewController.swift in Sources */,
 				1F5349FF261DFF45008A998C /* CourseViewController.swift in Sources */,
